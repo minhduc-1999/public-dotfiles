@@ -1,6 +1,6 @@
 #!/bin/bash
 
-configFileOrFolder=(".tmux.conf" ".zshrc" "config/nvim")
+configFileOrFolder=(".tmux.conf" ".zshrc" ".config/nvim")
 
 for config in ${configFileOrFolder[*]}
 do
