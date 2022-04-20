@@ -1,7 +1,7 @@
 require('plugins/main')
 require('settings/main')
 require('settings/_keymapping')
-require('plugins/_nightfox')
+require('plugins/_sonokai')
 require('plugins/_nvimtree')
 require('plugins/_lualine')
 require('plugins/_lspconfig')
