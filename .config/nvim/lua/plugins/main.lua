@@ -25,4 +25,5 @@ return require'packer'.startup(function()
       "windwp/nvim-autopairs",
     }
     use 'sainnhe/sonokai'
+    use 'jose-elias-alvarez/null-ls.nvim'
 end)
