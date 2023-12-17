@@ -4,8 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-POWERLEVEL9K_MODE="nerdfont-complete"
-# ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -94,26 +92,15 @@ export LANG=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-
-
 # z config
 export ZSHZ_CASE=smart
-
 
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias c="xclip"
-alias v="vim "
-alias sd="poweroff"
-alias emlt="$HOME/Android/Sdk/emulator/emulator"
-alias oemlt="$HOME/Android/Sdk/emulator/emulator -avd"
-alias ast="/usr/local/android-studio/bin/studio.sh"
+alias v="nvim"
 alias dkc="docker-compose"
-alias dka="docker kill \$(docker ps -q)"
-alias kall="kill -9 \$(pgrep GeckoMain) \$(pgrep nexion) \$(pgrep code) \$(pgrep notable) \$(pgrep chrome) \$(pgrep keepassxc)"
-alias chrlocal="google-chrome --proxy-pac-url=http://localhost:2000/proxy.pac"
-alias lc='colorls -lA --sd'
+alias ls='colorls --sd'
 alias la='colorls -la --sd'
 alias ld='colorls -lad'
 alias lf='colorls -laf'
@@ -123,14 +110,12 @@ alias cls='clear'
 alias rlcf='source ~/.zshrc'
 
 export PATH="$PATH:$HOME/.local/bin"
-alias vpnon="warp-cli connect"
-alias vpnoff="warp-cli disconnect"
 
-#Powerline9k
+# PowerLevel10k config
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 #POWERLEVEL9K_DISABLE_RPROMPT=true
 POWERLEVEL9K_CUSTOM_FURY="echo -n '\ue007' Fury"
-POWERLEVEL9K_CUSTOM_FURY_BACKGROUND="black" 
+POWERLEVEL9K_CUSTOM_FURY_BACKGROUND="#C8A2C8"
 POWERLEVEL9K_CUSTOM_FURY_FOREGROUND="white"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_fury dir vcs)
@@ -139,10 +124,20 @@ POWERLEVEL9K_HOME_ICON='\uf015'
 POWERLEVEL9K_HOME_SUB_ICON='\uf07c'
 POWERLEVEL9K_FOLDER_ICON='\uf74a'
 POWERLEVEL9K_ETC_ICON='\ue5fc'
-POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\ue0b4'
-POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$'\ue0c7'
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR='\ue0b4'
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR='\ue0c7'
 
-# Colorls
+POWERLEVEL9K_DIR_BACKGROUND="#5c6cff"
+POWERLEVEL9K_DIR_FOREGROUND="white"
+
+# NVM config
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# Colorls config
+if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
 source $(dirname $(gem which colorls))/tab_complete.sh
 
-export MYVIMRC="$HOME/config/nvim/init.lua"
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
