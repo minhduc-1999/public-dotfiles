@@ -43,7 +43,7 @@ vim.o.smartcase = true
 
 --Decrease update time
 vim.o.updatetime = 250
-vim.wo.signcolumn="yes"
+vim.wo.signcolumn ="yes"
 
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
@@ -56,11 +56,11 @@ vim.opt.fileencoding = 'utf-8'
 
 --Turn off backup
 vim.o.backup = false
-vim.o.writebackup = false
+vim.o.writebackup = true
 
 vim.o.clipboard = "unnamedplus"
 
-vim.wo.spell = false
+vim.wo.spell = true
 vim.bo.spelllang = 'en_us'
 
-vim.wo.linebreak = true 
+vim.wo.linebreak = true
