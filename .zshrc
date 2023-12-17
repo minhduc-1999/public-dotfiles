@@ -110,6 +110,7 @@ alias cls='clear'
 alias rlcf='source ~/.zshrc'
 
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.1.0/bin:$PATH"
 
 # PowerLevel10k config
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
@@ -138,6 +139,3 @@ export NVM_DIR="$HOME/.nvm"
 # Colorls config
 if which rbenv >/dev/null; then eval "$(rbenv init -)"; fi
 source $(dirname $(gem which colorls))/tab_complete.sh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
