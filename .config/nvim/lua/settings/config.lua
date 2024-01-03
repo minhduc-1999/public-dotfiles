@@ -64,3 +64,6 @@ vim.wo.spell = true
 vim.bo.spelllang = 'en_us'
 
 vim.wo.linebreak = true
+
+--Enable mouse
+vim.o.mouse = "a"
