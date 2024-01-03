@@ -12,7 +12,8 @@ return {
         'bash',
         'yaml',
         'lua',
-        'vimdoc'
+        'vimdoc',
+        "toml"
       },
       sync_install = false,
       highlight = { enable = true },
