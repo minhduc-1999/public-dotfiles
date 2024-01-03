@@ -1,4 +1,4 @@
-return { 
+return {
   "nvim-tree/nvim-tree.lua",
   version = "*",
   lazy = false,
@@ -17,4 +17,3 @@ return {
     vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
   end
 }
-

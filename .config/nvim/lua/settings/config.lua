@@ -1,5 +1,5 @@
 -- Set completeopt to have a better completion experience
-vim.o.completeopt="menuone,noinsert,noselect"
+vim.o.completeopt = "menuone,noinsert,noselect"
 
 --Incremental live completion
 vim.o.inccommand = "nosplit"
@@ -28,7 +28,7 @@ vim.o.autoindent = true
 vim.o.breakindent = true
 
 --Save undo history
-vim.cmd[[set undofile]]
+vim.cmd [[set undofile]]
 
 --Hightlight current cursor line
 vim.wo.cursorline = true
@@ -43,7 +43,7 @@ vim.o.smartcase = true
 
 --Decrease update time
 vim.o.updatetime = 250
-vim.wo.signcolumn ="yes"
+vim.wo.signcolumn = "yes"
 
 --Set colorscheme (order is important here)
 vim.o.termguicolors = true
