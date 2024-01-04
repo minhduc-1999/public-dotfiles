@@ -1,14 +1,24 @@
 return {
-  'nvim-telescope/telescope.nvim',
-  tag = '0.1.5',
-  dependencies = {
-    'nvim-lua/plenary.nvim'
-  },
-  config = function()
-    local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>ff', builtin.find_files, { noremap = true, silent = true })
-    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { noremap = true, silent = true })
-    vim.keymap.set('n', '<leader>fb', builtin.buffers, { noremap = true, silent = true })
-    vim.keymap.set('n', '<leader>fh', builtin.help_tags, { noremap = true, silent = true })
-  end
+	"nvim-telescope/telescope.nvim",
+	tag = "0.1.5",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
+	config = function()
+		local actions = require("telescope.actions")
+		require("telescope").setup({
+			defaults = {
+				mappings = {
+					n = {
+						["d"] = actions.delete_buffer,
+					},
+				},
+			},
+		})
+		local builtin = require("telescope.builtin")
+		vim.keymap.set("n", "<leader>ff", builtin.find_files, { noremap = true, silent = true })
+		vim.keymap.set("n", "<leader>fg", builtin.live_grep, { noremap = true, silent = true })
+		vim.keymap.set("n", "<leader>fb", builtin.buffers, { noremap = true, silent = true })
+		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { noremap = true, silent = true })
+	end,
 }
