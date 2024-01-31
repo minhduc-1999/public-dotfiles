@@ -25,6 +25,10 @@ return {
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
 			})
+			lspconfig.html.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.emmet_language_server.setup({})
 			lspconfig.rust_analyzer.setup({
 				settings = {
 					["rust-analyzer"] = {},
